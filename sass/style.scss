@@ -1,48 +1,109 @@
 @import "variables.scss";
 @import "backgroundImages.scss";
 
-body{
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: arial;
+  img{
+    display: block;
+    margin: auto;
+  }
+}
+
+.stopScroll{
+  overflow: hidden;
 }
 
 header{
-  ul{
-    display: inline-block;
-    li{
-      display: inline-block;
+  background-color: black;
+  color: white;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 100000;
+  .navigation{
+    h2{
+      float: left;
+    }
+    img{
+      float: left;
+    }
+    ul{
+      display: none;
+      padding: 20px;
+
+      li{
+        list-style-type: none;
+        padding: 20px;
+        font-size: 2em;
+        ul{
+          display: none;
+          li{
+            font-size: 0.8em;
+          }
+        }
+        a{
+          color: white;
+          text-decoration: none;
+        }
+      }
     }
   }
-
 }
+
+.hide{
+  display: none;
+  transition: 2s ease-in-out;
+}
+
 
 #homeSection1{
   height: 80vh;
+  position: relative;
+  div{
+    position: absolute;
+    bottom: 0;
+    margin: 0px 20px 10% 20px;
     h1{
-      position: absolute;
-      bottom: 30px;
-      // left: 0;
-      margin: 0px 20px 0px 20px;
+      font-size: 2.5em;
+      padding-bottom: 20px;
     }
     h4{
-      position: absolute;
-      bottom: 0px;
-      margin: 0px 20px 0px 20px;
+      font-size: 1.5em;
     }
+  }
 }
 
 #homeSection2{
   text-align: center;
+  h2{
+    font-size: 2em;
+    padding-top: 20px;
+  }
+  h3{
+    font-size: 1.5em;
+    padding: 20px;
+  }
   .homeCategories:nth-child(5){
     display: none;
   }
 }
 
 #homeSection3{
+  text-align: center;
   div{
     margin: 50px 20px 0px 20px;
+    text-align: left;
+    h2{
+      font-size: 2em;
+    }
+    h3{
+      font-size: 1.5em;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
   }
   img{
     max-width: 100%;
@@ -51,17 +112,22 @@ header{
 
 #homeSection4{
   div{
-    height: 80vh;
-    h2{
-      position: relative;
+    height: 40vh;
+    position: relative;
+    span{
+      position: absolute;
       bottom: 0;
-      left: 0;
-      margin: 0px 20px 0px 20px;
+      margin: 0px 20px 10% 20px;
+
     }
-    h3{
-      position: relative;
-      bottom: -30px;
-      margin: 0px 20px 0px 20px;
-    }
+  }
+}
+
+@media only screen and (min-width:768px) {
+  #homeSection1{
+    height: 50vh;
+  }
+  #homeSection2{
+
   }
 }

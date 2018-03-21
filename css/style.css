@@ -22,48 +22,96 @@
   background-size: cover;
   height: 30vh; }
 
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: arial; }
+  * img {
+    display: block;
+    margin: auto; }
 
-header ul {
-  display: inline-block; }
-  header ul li {
-    display: inline-block; }
+.stopScroll {
+  overflow: hidden; }
+
+header {
+  background-color: black;
+  color: white;
+  width: 100vw;
+  top: 0;
+  position: fixed;
+  z-index: 100000; }
+  header .navigation h2 {
+    float: left; }
+  header .navigation img {
+    float: left; }
+  header .navigation ul {
+    display: none;
+    padding: 20px; }
+    header .navigation ul li {
+      list-style-type: none;
+      padding: 20px;
+      font-size: 2em; }
+      header .navigation ul li ul {
+        display: none; }
+        header .navigation ul li ul li {
+          font-size: 0.8em; }
+      header .navigation ul li a {
+        color: white;
+        text-decoration: none; }
+
+.hide {
+  display: none;
+  transition: 2s ease-in-out; }
 
 #homeSection1 {
-  height: 80vh; }
-  #homeSection1 h1 {
+  height: 80vh;
+  position: relative; }
+  #homeSection1 div {
     position: absolute;
-    bottom: 30px;
-    margin: 0px 20px 0px 20px; }
-  #homeSection1 h4 {
-    position: absolute;
-    bottom: 0px;
-    margin: 0px 20px 0px 20px; }
+    bottom: 0;
+    margin: 0px 20px 10% 20px; }
+    #homeSection1 div h1 {
+      font-size: 2.5em;
+      padding-bottom: 20px; }
+    #homeSection1 div h4 {
+      font-size: 1.5em; }
 
 #homeSection2 {
   text-align: center; }
+  #homeSection2 h2 {
+    font-size: 2em;
+    padding-top: 20px; }
+  #homeSection2 h3 {
+    font-size: 1.5em;
+    padding: 20px; }
   #homeSection2 .homeCategories:nth-child(5) {
     display: none; }
 
-#homeSection3 div {
-  margin: 50px 20px 0px 20px; }
-#homeSection3 img {
-  max-width: 100%; }
+#homeSection3 {
+  text-align: center; }
+  #homeSection3 div {
+    margin: 50px 20px 0px 20px;
+    text-align: left; }
+    #homeSection3 div h2 {
+      font-size: 2em; }
+    #homeSection3 div h3 {
+      font-size: 1.5em;
+      padding-top: 5px;
+      padding-bottom: 5px; }
+  #homeSection3 img {
+    max-width: 100%; }
 
 #homeSection4 div {
-  height: 80vh; }
-  #homeSection4 div h2 {
-    position: relative;
+  height: 40vh;
+  position: relative; }
+  #homeSection4 div span {
+    position: absolute;
     bottom: 0;
-    left: 0;
-    margin: 0px 20px 0px 20px; }
-  #homeSection4 div h3 {
-    position: relative;
-    bottom: -30px;
-    margin: 0px 20px 0px 20px; }
+    margin: 0px 20px 10% 20px; }
+
+@media only screen and (min-width: 768px) {
+  #homeSection1 {
+    height: 50vh; } }
 
 /*# sourceMappingURL=style.css.map */
