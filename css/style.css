@@ -1,0 +1,69 @@
+#homeSection1 {
+  background-image: url(../images/homeImageOne.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+#homeTeaware {
+  background-image: url(../images/teaware.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh; }
+
+#homeIcedTea {
+  background-image: url(../images/icedTea.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh; }
+
+#homeGifts {
+  background-image: url(../images/gifts.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 30vh; }
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: arial; }
+
+header ul {
+  display: inline-block; }
+  header ul li {
+    display: inline-block; }
+
+#homeSection1 {
+  height: 80vh; }
+  #homeSection1 h1 {
+    position: absolute;
+    bottom: 30px;
+    margin: 0px 20px 0px 20px; }
+  #homeSection1 h4 {
+    position: absolute;
+    bottom: 0px;
+    margin: 0px 20px 0px 20px; }
+
+#homeSection2 {
+  text-align: center; }
+  #homeSection2 .homeCategories:nth-child(5) {
+    display: none; }
+
+#homeSection3 div {
+  margin: 50px 20px 0px 20px; }
+#homeSection3 img {
+  max-width: 100%; }
+
+#homeSection4 div {
+  height: 80vh; }
+  #homeSection4 div h2 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0px 20px 0px 20px; }
+  #homeSection4 div h3 {
+    position: relative;
+    bottom: -30px;
+    margin: 0px 20px 0px 20px; }
+
+/*# sourceMappingURL=style.css.map */
