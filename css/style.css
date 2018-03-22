@@ -1,7 +1,7 @@
 #homeSection1 {
   background-image: url(../images/homeImageOne.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat; }
 
 #homeTeaware {
@@ -34,6 +34,13 @@
 .stopScroll {
   overflow: hidden; }
 
+.scroll {
+  overflow-y: auto; }
+
+.fixed {
+  position: fixed;
+  top: 0; }
+
 header {
   background-color: black;
   color: white;
@@ -41,24 +48,25 @@ header {
   top: 0;
   position: fixed;
   z-index: 100000; }
-  header .navigation h2 {
-    float: left; }
-  header .navigation img {
-    float: left; }
-  header .navigation ul {
-    display: none;
-    padding: 20px; }
-    header .navigation ul li {
-      list-style-type: none;
-      padding: 20px;
-      font-size: 2em; }
-      header .navigation ul li ul {
-        display: none; }
-        header .navigation ul li ul li {
-          font-size: 0.8em; }
-      header .navigation ul li a {
-        color: white;
-        text-decoration: none; }
+  header .navigation {
+    height: 100%; }
+    header .navigation img {
+      float: left; }
+    header .navigation ul.mainUl {
+      height: 100vh;
+      display: none;
+      padding: 20px; }
+      header .navigation ul.mainUl li {
+        list-style-type: none;
+        padding: 20px;
+        font-size: 2em; }
+        header .navigation ul.mainUl li ul {
+          display: none; }
+          header .navigation ul.mainUl li ul li {
+            font-size: 0.8em; }
+        header .navigation ul.mainUl li a {
+          color: white;
+          text-decoration: none; }
 
 .hide {
   display: none;
@@ -112,17 +120,19 @@ header {
 
 @media only screen and (min-width: 768px) {
   #homeSection1 {
-    height: 50vh; }
+    height: 50vh;
+    font-size: 1.2em; }
 
   .homeCategoriesWrapper {
-    display: flex; }
+    display: flex;
+    justify-content: space-between;
+    padding: 20px; }
 
   .homeCategories:nth-child(4) {
     display: none; }
 
   #homeSection3 {
-    display: flex;
-    justify-content: space-between; }
+    display: flex; }
     #homeSection3 div {
       order: 2;
       flex: 1; }
@@ -134,11 +144,40 @@ header {
     height: 50vh; } }
 @media only screen and (min-width: 1255px) {
   .container {
-    width: 80vw;
+    width: 80%;
     margin: auto; }
+
+  header {
+    width: 80%; }
+    header .navigation ul.mainUl {
+      display: inline-block;
+      height: 20px;
+      display: block;
+      width: 100%; }
+      header .navigation ul.mainUl li {
+        float: left;
+        font-size: 1.5em; }
+        header .navigation ul.mainUl li li:hover ul {
+          display: block; }
+        header .navigation ul.mainUl li .nestedUl {
+          display: none;
+          position: absolute;
+          background-color: black;
+          width: 100%;
+          right: 0px;
+          display: none; }
+          header .navigation ul.mainUl li .nestedUl li {
+            padding: 20px;
+            width: 100%; }
 
   #homeSection1 {
     height: 90vh; }
+    #homeSection1 div {
+      padding: 40px; }
+      #homeSection1 div h1 {
+        font-size: 4em; }
+      #homeSection1 div h4 {
+        font-size: 3em; }
 
   .homeCategories:nth-child(4) {
     display: block; }

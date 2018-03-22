@@ -16,6 +16,16 @@
   overflow: hidden;
 }
 
+.scroll{
+  // height: 100%;
+  overflow-y: auto;
+}
+
+.fixed{
+  position: fixed;
+  top: 0;
+}
+
 header{
   background-color: black;
   color: white;
@@ -24,16 +34,14 @@ header{
   position: fixed;
   z-index: 100000;
   .navigation{
-    h2{
-      float: left;
-    }
+    height: 100%;
     img{
       float: left;
     }
-    ul{
+    ul.mainUl{
+      height: 100vh;
       display: none;
       padding: 20px;
-
       li{
         list-style-type: none;
         padding: 20px;
@@ -57,7 +65,6 @@ header{
   display: none;
   transition: 2s ease-in-out;
 }
-
 
 #homeSection1{
   height: 80vh;
@@ -118,7 +125,6 @@ header{
       position: absolute;
       bottom: 0;
       margin: 0px 20px 10% 20px;
-
     }
   }
 }
@@ -126,17 +132,21 @@ header{
 @media only screen and (min-width:768px) {
   #homeSection1{
     height: 50vh;
+    font-size: 1.2em;
   }
+
   .homeCategoriesWrapper{
     display: flex;
+    justify-content: space-between;
+    padding: 20px;
   }
+
   .homeCategories:nth-child(4){
     display: none;
   }
+
   #homeSection3{
-    
     display: flex;
-    justify-content: space-between;
     div{
       order: 2;
       flex: 1;
@@ -146,6 +156,7 @@ header{
       flex: 1;
     }
   }
+
   #homeSection4 div{
     height: 50vh;
   }
@@ -153,12 +164,54 @@ header{
 
 @media only screen and (min-width:1255px){
   .container{
-    width: 80vw;
+    width: 80%;
     margin: auto;
   }
+
+  header{
+    width: 80%;
+    .navigation{
+      ul.mainUl{
+        display: inline-block;
+        height: 20px;
+        display: block;
+        width: 100%;
+        li{
+          float: left;
+          font-size: 1.5em;
+        li:hover ul {
+          display: block;
+        }
+          .nestedUl{
+            display: none;
+            position: absolute;
+            background-color: black;
+            width: 100%;
+            right: 0px;
+            display: none;
+            li{
+              padding: 20px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #homeSection1{
     height: 90vh;
+    div{
+      padding: 40px;
+      h1{
+        font-size: 4em;
+      }
+      h4{
+        font-size: 3em;
+      }
+    }
   }
+
   .homeCategories:nth-child(4){
     display: block;
   }
@@ -169,15 +222,17 @@ header{
       flex: 1;
       height: 600px;
     }
+
     #homeTeaware{
       flex:1;
     }
+
     #homeGifts{
       flex: 2;
     }
+
     #homeIcedTea{
       flex: 1;
     }
-
   }
 }
