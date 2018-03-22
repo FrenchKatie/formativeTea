@@ -127,7 +127,57 @@ header{
   #homeSection1{
     height: 50vh;
   }
-  #homeSection2{
+  .homeCategoriesWrapper{
+    display: flex;
+  }
+  .homeCategories:nth-child(4){
+    display: none;
+  }
+  #homeSection3{
+    
+    display: flex;
+    justify-content: space-between;
+    div{
+      order: 2;
+      flex: 1;
+    }
+    img{
+      order: 1;
+      flex: 1;
+    }
+  }
+  #homeSection4 div{
+    height: 50vh;
+  }
+}
+
+@media only screen and (min-width:1255px){
+  .container{
+    width: 80vw;
+    margin: auto;
+  }
+  #homeSection1{
+    height: 90vh;
+  }
+  .homeCategories:nth-child(4){
+    display: block;
+  }
+  #homeSection4{
+    margin-top: 20px;
+    display: flex;
+    div{
+      flex: 1;
+      height: 600px;
+    }
+    #homeTeaware{
+      flex:1;
+    }
+    #homeGifts{
+      flex: 2;
+    }
+    #homeIcedTea{
+      flex: 1;
+    }
 
   }
 }

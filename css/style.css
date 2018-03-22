@@ -112,6 +112,48 @@ header {
 
 @media only screen and (min-width: 768px) {
   #homeSection1 {
+    height: 50vh; }
+
+  .homeCategoriesWrapper {
+    display: flex; }
+
+  .homeCategories:nth-child(4) {
+    display: none; }
+
+  #homeSection3 {
+    display: flex;
+    justify-content: space-between; }
+    #homeSection3 div {
+      order: 2;
+      flex: 1; }
+    #homeSection3 img {
+      order: 1;
+      flex: 1; }
+
+  #homeSection4 div {
     height: 50vh; } }
+@media only screen and (min-width: 1255px) {
+  .container {
+    width: 80vw;
+    margin: auto; }
+
+  #homeSection1 {
+    height: 90vh; }
+
+  .homeCategories:nth-child(4) {
+    display: block; }
+
+  #homeSection4 {
+    margin-top: 20px;
+    display: flex; }
+    #homeSection4 div {
+      flex: 1;
+      height: 600px; }
+    #homeSection4 #homeTeaware {
+      flex: 1; }
+    #homeSection4 #homeGifts {
+      flex: 2; }
+    #homeSection4 #homeIcedTea {
+      flex: 1; } }
 
 /*# sourceMappingURL=style.css.map */
