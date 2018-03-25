@@ -66,6 +66,8 @@ header{
   transition: 2s ease-in-out;
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 #homeSection1{
   height: 80vh;
   position: relative;
@@ -128,6 +130,125 @@ header{
     }
   }
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#categorySection1{
+    position: relative;
+    height: 80vh;
+    font-size: 2em;
+    #categorySection1Text{
+      position: absolute;
+      bottom: 0;
+      margin: 0px 20px 10% 20px;
+    }
+}
+
+#categorySection2{
+  text-align: center;
+  padding: 20px;
+  h2{
+
+  }
+  ul{
+    li{
+      list-style-type: none;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 1.2em;
+    }
+  }
+}
+
+#categorySection2{
+  text-align: center;
+  .categoryProduct{
+    margin-bottom: 20px;
+    button{
+      border: 0;
+      background-color: $primaryColor;
+      font-size: 1.2em;
+      padding: 20px 50px;
+      color: white;
+      margin-top: 20px;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#productSection1{
+  // padding: 20px;
+  .productImage1{
+    text-align: center;
+    padding: 20px;
+    img{
+      width: 100%;
+    }
+  }
+  .productInfo{
+    // background-color: #f1f2f6;
+    padding: 20px;
+    h1{
+      // padding-bottom: 10px;
+    }
+    h3{
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    ul{
+      list-style-type: none;
+      li{
+        display: inline-block;
+        background-color: white;
+        border: 1px solid #e1e1e1;
+        padding: 10px 20px;
+        font-size: 0.8em;
+      }
+    }
+    span{
+      .addToCartButton{
+        border: 0;
+        background-color: $primaryColor;
+        font-size: 1.2em;
+        padding: 20px 50px;
+        color: white;
+        margin-top: 20px;
+        width: 100%;
+      }
+      .checkoutButton{
+        border: 0;
+        background-color: $secondaryColor;
+        font-size: 1.2em;
+        padding: 20px 50px;
+        width: 100%;
+        color: white;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+#productSection2{
+  text-align: center;
+  .categoryProduct{
+    padding: 20px;
+    // outline: solid red;
+    button{
+      border: 0;
+      background-color: $primaryColor;
+      font-size: 1.2em;
+      padding: 20px 50px;
+      color: white;
+      margin-top: 20px;
+    }
+    h3{
+      margin: 20px 0 20px 0;
+    }
+  }
+
+
+}
+
+
 
 @media only screen and (min-width:768px) {
   #homeSection1{
@@ -147,22 +268,66 @@ header{
 
   #homeSection3{
     display: flex;
-    div{
+    #homeSection3Text{
       order: 2;
       flex: 1;
     }
-    img{
+    #homeSection3Img{
       order: 1;
-      flex: 1;
+      flex: 2;
     }
   }
 
   #homeSection4 div{
-    height: 50vh;
+    height: 60vh;
   }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  #categorySection1{
+    height: 50vh;
+    h1{
+      // font-size: 2.5em;
+    }
+  }
+
+  .categoryProductsWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    .categoryProduct{
+      flex: 1;
+    }
+  }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  #productSection1{
+    display: flex;
+    .productImage1{
+      flex:1;
+    }
+    .productInfo{
+      flex:1;
+    }
+  }
+
+  #productSection2{
+    h3{
+      padding: 20px;
+    }
+    .reccomendedProductsWrapper{
+      display: flex;
+      justify-content: space-between;
+      .categoryProduct{
+        flex: 1;
+        max-width: 30%;
+      }
+    }
+  }
+
 }
 
-@media only screen and (min-width:1255px){
+@media only screen and (min-width:1200px){
   .container{
     width: 80%;
     margin: auto;
@@ -216,7 +381,6 @@ header{
     display: block;
   }
   #homeSection4{
-    margin-top: 20px;
     display: flex;
     div{
       flex: 1;
@@ -235,4 +399,38 @@ header{
       flex: 1;
     }
   }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  #categorySection1{
+    height: 80vh;
+    // font-size:
+  }
+
+  #categorySection2{
+    display: flex;
+
+    .categoryNav{
+      flex:1;
+      text-align: left;
+      h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+    }
+    .categoryProductsWrapper{
+      flex: 3;
+      .categoryProduct{
+        width:30%;
+      }
+      h2{
+        width: 100%;
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+    }
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 }

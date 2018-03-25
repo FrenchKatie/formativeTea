@@ -22,4 +22,15 @@
   background-size: cover;
   height: 30vh; }
 
+#homeSection3Img {
+  background-image: url(../images/teaOfTheMonth.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh; }
+
+#categorySection1 {
+  background-image: url(../images/categoryImageOne.jpg);
+  background-position: center;
+  background-size: cover; }
+
 /*# sourceMappingURL=backgroundImages.css.map */

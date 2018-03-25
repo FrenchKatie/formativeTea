@@ -22,6 +22,17 @@
   background-size: cover;
   height: 30vh; }
 
+#homeSection3Img {
+  background-image: url(../images/teaOfTheMonth.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh; }
+
+#categorySection1 {
+  background-image: url(../images/categoryImageOne.jpg);
+  background-position: center;
+  background-size: cover; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -118,6 +129,85 @@ header {
     bottom: 0;
     margin: 0px 20px 10% 20px; }
 
+#categorySection1 {
+  position: relative;
+  height: 80vh;
+  font-size: 2em; }
+  #categorySection1 #categorySection1Text {
+    position: absolute;
+    bottom: 0;
+    margin: 0px 20px 10% 20px; }
+
+#categorySection2 {
+  text-align: center;
+  padding: 20px; }
+  #categorySection2 ul li {
+    list-style-type: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2em; }
+
+#categorySection2 {
+  text-align: center; }
+  #categorySection2 .categoryProduct {
+    margin-bottom: 20px; }
+    #categorySection2 .categoryProduct button {
+      border: 0;
+      background-color: #e15f41;
+      font-size: 1.2em;
+      padding: 20px 50px;
+      color: white;
+      margin-top: 20px; }
+
+#productSection1 .productImage1 {
+  text-align: center;
+  padding: 20px; }
+  #productSection1 .productImage1 img {
+    width: 100%; }
+#productSection1 .productInfo {
+  padding: 20px; }
+  #productSection1 .productInfo h3 {
+    padding-bottom: 20px;
+    padding-top: 20px; }
+  #productSection1 .productInfo ul {
+    list-style-type: none; }
+    #productSection1 .productInfo ul li {
+      display: inline-block;
+      background-color: white;
+      border: 1px solid #e1e1e1;
+      padding: 10px 20px;
+      font-size: 0.8em; }
+  #productSection1 .productInfo span .addToCartButton {
+    border: 0;
+    background-color: #e15f41;
+    font-size: 1.2em;
+    padding: 20px 50px;
+    color: white;
+    margin-top: 20px;
+    width: 100%; }
+  #productSection1 .productInfo span .checkoutButton {
+    border: 0;
+    background-color: black;
+    font-size: 1.2em;
+    padding: 20px 50px;
+    width: 100%;
+    color: white;
+    margin-top: 20px; }
+
+#productSection2 {
+  text-align: center; }
+  #productSection2 .categoryProduct {
+    padding: 20px; }
+    #productSection2 .categoryProduct button {
+      border: 0;
+      background-color: #e15f41;
+      font-size: 1.2em;
+      padding: 20px 50px;
+      color: white;
+      margin-top: 20px; }
+    #productSection2 .categoryProduct h3 {
+      margin: 20px 0 20px 0; }
+
 @media only screen and (min-width: 768px) {
   #homeSection1 {
     height: 50vh;
@@ -133,16 +223,41 @@ header {
 
   #homeSection3 {
     display: flex; }
-    #homeSection3 div {
+    #homeSection3 #homeSection3Text {
       order: 2;
       flex: 1; }
-    #homeSection3 img {
+    #homeSection3 #homeSection3Img {
       order: 1;
-      flex: 1; }
+      flex: 2; }
 
   #homeSection4 div {
-    height: 50vh; } }
-@media only screen and (min-width: 1255px) {
+    height: 60vh; }
+
+  #categorySection1 {
+    height: 50vh; }
+
+  .categoryProductsWrapper {
+    display: flex;
+    flex-wrap: wrap; }
+    .categoryProductsWrapper .categoryProduct {
+      flex: 1; }
+
+  #productSection1 {
+    display: flex; }
+    #productSection1 .productImage1 {
+      flex: 1; }
+    #productSection1 .productInfo {
+      flex: 1; }
+
+  #productSection2 h3 {
+    padding: 20px; }
+  #productSection2 .reccomendedProductsWrapper {
+    display: flex;
+    justify-content: space-between; }
+    #productSection2 .reccomendedProductsWrapper .categoryProduct {
+      flex: 1;
+      max-width: 30%; } }
+@media only screen and (min-width: 1200px) {
   .container {
     width: 80%;
     margin: auto; }
@@ -183,7 +298,6 @@ header {
     display: block; }
 
   #homeSection4 {
-    margin-top: 20px;
     display: flex; }
     #homeSection4 div {
       flex: 1;
@@ -194,5 +308,24 @@ header {
       flex: 2; }
     #homeSection4 #homeIcedTea {
       flex: 1; } }
+#categorySection1 {
+  height: 80vh; }
+
+#categorySection2 {
+  display: flex; }
+  #categorySection2 .categoryNav {
+    flex: 1;
+    text-align: left; }
+    #categorySection2 .categoryNav h2 {
+      font-size: 2em;
+      margin-bottom: 20px; }
+  #categorySection2 .categoryProductsWrapper {
+    flex: 3; }
+    #categorySection2 .categoryProductsWrapper .categoryProduct {
+      width: 30%; }
+    #categorySection2 .categoryProductsWrapper h2 {
+      width: 100%;
+      font-size: 2em;
+      margin-bottom: 30px; }
 
 /*# sourceMappingURL=style.css.map */
