@@ -7,26 +7,22 @@
 #homeTeaware {
   background-image: url(../images/teaware.jpg);
   background-position: center;
-  background-size: cover;
-  height: 30vh; }
+  background-size: cover; }
 
 #homeIcedTea {
   background-image: url(../images/icedTea.jpg);
   background-position: center;
-  background-size: cover;
-  height: 30vh; }
+  background-size: cover; }
 
 #homeGifts {
   background-image: url(../images/gifts.jpg);
   background-position: center;
-  background-size: cover;
-  height: 30vh; }
+  background-size: cover; }
 
 #homeSection3Img {
   background-image: url(../images/teaOfTheMonth.jpg);
   background-position: center;
-  background-size: cover;
-  height: 50vh; }
+  background-size: cover; }
 
 #categorySection1 {
   background-image: url(../images/categoryImageOne.jpg);

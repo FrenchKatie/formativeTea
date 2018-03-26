@@ -1,9 +1,10 @@
 $(document).ready(function(){
+  //navigation
   $(".teasUl").click(function(){
     $(".nestedUl").slideToggle();
   })
 
-
+//navigation
   $(".toggleMobNav").click(function(){
     $(".mainUl").slideToggle();
     $("body").toggleClass('stopScroll');
@@ -11,32 +12,21 @@ $(document).ready(function(){
     $(".toggleMobNav").toggleClass('fixed');
   })
 
+//hamburger bars
   $('#nav-icon3').click(function(){
     $(this).toggleClass('open');
   });
 
-  // $('.teasUl').on("click", function(){
-  //   var $arrows = $(this).find("i");
-  //   $('.open-close-toggle').toggle(function(){
-  //     $arrows.toggle();
-  //   })
-  // });
-  // 
-  // $( ".mainUl" ).toggle({
-  //     heightStyle: "content",
-  //     active:false,
-  //     collapsible: true,
-  //     header:"div.accordianheader"
-  //   });
+//arrow rotate
+  $(".teasUl").click(function(){
+    $(".rotateArrow").toggleClass("rotate180");
+  });
 
-
-
-
-
-
-    // $('.toggle-section').slideToggle(function(){
-    //     $arrows.toggle();
-    // });
+//product image toggle
+//have not yet edited
+  // $(".teasUl").click(function(){
+  //   $(".nestedUl").slideToggle();
+  // })
 
 
 });
