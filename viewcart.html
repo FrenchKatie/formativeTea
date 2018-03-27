@@ -14,10 +14,6 @@
 
       <div class="navigation">
 
-        <div id="navBagLink"></div>
-        <div class="navSearchLink"></div>
-        <!-- <img src="http://via.placeholder.com/100x100" alt="Logo"> -->
-
         <div id="nav-icon3" class="toggleMobNav">
           <span></span>
           <span></span>
@@ -26,6 +22,7 @@
         </div>
 
         <ul class="mainUl">
+          <li><a href="index.html">Home</a></li>
           <li class="teasUl"><a href="#">Teas
             <i class="rotateArrow fas fa-angle-down"></i>
             <ul class="nestedUl toggle-section">
@@ -38,33 +35,116 @@
               <li> <a href="#">Herbal</a></li>
             </ul>
           </a></li>
-          <li><a href="">Gifts</a></li>
+          <!-- <li><a href="">Gifts</a></li>
           <li><a href="">Teaware</a></li>
           <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="">Contact</a></li> -->
         </ul>
       </div>
     </header>
     <main>
+      <section class="cartSection1">
 
-      <h1>Your Shopping Cart</h1>
-      <table>
-        <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Price</th>
-        </tr>
-        <tr>
-          <td>
-            <img src="images/product1.jpg" alt="">
-            <h3>Summer Tea Organic</h3>
-            <h6>100gm | 40 Cups</h6>
-          </td>
-          <td>1</td>
-          <td>$29.00</td>
-        </tr>
+        <h1>Shopping Cart</h1>
 
-      </table>
+        <div class="shopping-cart">
+
+          <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/blackTeaCategory.jpg">
+            </div>
+            <div class="product-details">
+              <div class="product-title">Summer Peach Organic</div>
+              <p class="product-description">It's all peachy with this succulent blend of lip smacking flavours. This sweet brew sings of peach, papaya, apple and roasted chicory, creating a soft combo that really packs a peach. Also great iced.</p>
+            </div>
+            <div class="product-price">12.99</div>
+            <div class="product-quantity">
+              <input type="number" value="2" min="1">
+            </div>
+            <div class="product-removal">
+              <button class="remove-product">
+                Remove
+              </button>
+            </div>
+            <div class="product-line-price">25.98</div>
+          </div>
+
+          <div class="product">
+            <div class="product-image">
+              <img src="images/fruitTeaCategory.jpg">
+            </div>
+            <div class="product-details">
+              <div class="product-title">Lemongrass and Ginger</div>
+              <p class="product-description">A lemon balm-based tisane that is the perfect nighttime brew with a glorious aroma and delicate sweet flavour.</p>
+            </div>
+            <div class="product-price">45.99</div>
+            <div class="product-quantity">
+              <input type="number" value="1" min="1">
+            </div>
+            <div class="product-removal">
+              <button class="remove-product">
+                Remove
+              </button>
+            </div>
+            <div class="product-line-price">45.99</div>
+          </div>
+
+          <div class="totals">
+            <div class="totals-item">
+              <label>Subtotal</label>
+              <div class="totals-value" id="cart-subtotal">71.97</div>
+            </div>
+            <div class="totals-item">
+              <label>Tax (5%)</label>
+              <div class="totals-value" id="cart-tax">3.60</div>
+            </div>
+            <div class="totals-item">
+              <label>Shipping</label>
+              <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+              <label>Grand Total</label>
+              <div class="totals-value" id="cart-total">90.57</div>
+            </div>
+          </div>
+
+              <button class="checkout"><a href="checkout.html">Checkout</a></button>
+
+        </div>
+
+      </section>
+      <section id="cartSection2" >
+        <h3>Previously viewed items:</h3>
+        <div class="previouslyViewedProductsWrapper">
+          <div class="previouslyViewedProduct">
+            <img src="images/product2.jpg" alt="">
+            <h3>Zen Garden</h3>
+            <h5>100gm | 40 Cups</h5>
+            <button type="button" name="button">See More</button>
+          </div>
+          <div class="previouslyViewedProduct">
+            <img src="images/product4.jpg" alt="">
+            <h3>Zen Garden</h3>
+            <h5>100gm | 40 Cups</h5>
+            <button type="button" name="button">See More</button>
+          </div>
+          <div class="previouslyViewedProduct">
+            <img src="images/product5.jpg" alt="">
+            <h3>Zen Garden</h3>
+            <h5>100gm | 40 Cups</h5>
+            <button type="button" name="button">See More</button>
+          </div>
+        </div>
+      </section>
 
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

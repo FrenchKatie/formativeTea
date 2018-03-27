@@ -33,7 +33,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: arial; }
+  font-family: arial;
+  text-decoration: none; }
   * img {
     display: block;
     margin: auto; }
@@ -165,6 +166,8 @@ header {
       padding-bottom: 20px; }
     #homeSection1 div h4 {
       font-size: 1.5em; }
+      #homeSection1 div h4 a {
+        color: black; }
 
 #homeSection2 {
   text-align: center; }
@@ -174,6 +177,8 @@ header {
   #homeSection2 h3 {
     font-size: 1.5em;
     padding: 20px; }
+  #homeSection2 .homeCategories a {
+    color: black; }
   #homeSection2 .homeCategories:nth-child(5) {
     display: none; }
 
@@ -183,6 +188,8 @@ header {
 #homeSection3Text {
   text-align: center;
   margin: 20px 20px 0 20px; }
+  #homeSection3Text a {
+    color: black; }
   #homeSection3Text h2 {
     font-size: 2em; }
   #homeSection3Text h3 {
@@ -219,9 +226,12 @@ header {
     padding: 20px 0; }
   #categorySection2 .categoryProductsWrapper .categoryProduct {
     margin-bottom: 20px; }
+    #categorySection2 .categoryProductsWrapper .categoryProduct a {
+      color: black; }
     #categorySection2 .categoryProductsWrapper .categoryProduct button {
+      border-radius: 0px;
       border: 0;
-      background-color: #e15f41;
+      background-color: black;
       font-size: 1.2em;
       padding: 20px 50px;
       color: white;
@@ -248,6 +258,7 @@ header {
         padding: 10px 20px;
         font-size: 0.8em; }
     #productSection1 .productInfo span .addToCartButton {
+      border-radius: 0px;
       border: 0;
       background-color: #e15f41;
       font-size: 1.2em;
@@ -256,13 +267,15 @@ header {
       margin-top: 20px;
       width: 100%; }
     #productSection1 .productInfo span .checkoutButton {
+      border-radius: 0px;
       border: 0;
       background-color: black;
       font-size: 1.2em;
       padding: 20px 50px;
       width: 100%;
-      color: white;
       margin-top: 20px; }
+      #productSection1 .productInfo span .checkoutButton a {
+        color: white; }
 
 #productSection2 {
   text-align: center; }
@@ -270,13 +283,227 @@ header {
     margin-bottom: 30px;
     margin-top: 30px; }
     #productSection2 .categoryProduct button {
+      border-radius: 0;
       border: 0;
-      background-color: #e15f41;
+      background-color: black;
       font-size: 1.2em;
-      padding: 20px 50px;
-      color: white; }
+      padding: 10px 70px;
+      color: white;
+      margin-top: 20px;
+      width: 80%; }
     #productSection2 .categoryProduct h3, #productSection2 .categoryProduct h5 {
       padding-bottom: 10px; }
+
+.cartSection1 {
+  margin-top: 100px;
+  padding: 0 20px; }
+  .cartSection1 h1 {
+    text-align: center;
+    font-size: 2em;
+    padding: 20px 0; }
+
+/* Global "table" column settings */
+.product-image {
+  float: left; }
+
+.product-details {
+  float: left; }
+
+.product-price {
+  float: left; }
+
+.product-quantity {
+  float: left; }
+
+.product-price::after {
+  content: ' x'; }
+
+.product-removal {
+  float: left; }
+
+.product-line-price {
+  float: right;
+  text-align: right; }
+
+/* This is used as the traditional .clearfix class */
+.group:before, .shopping-cart:before, .column-labels:before, .product:before, .totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: '';
+  display: table; }
+
+.group:after, .shopping-cart:after, .column-labels:after, .product:after, .totals-item:after {
+  clear: both; }
+
+.group, .shopping-cart, .column-labels, .product, .totals-item {
+  zoom: 1; }
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before, .product .product-line-price:before, .totals-value:before {
+  content: '$'; }
+
+/* Body/Header stuff */
+label {
+  color: #aaa; }
+
+/* Column headers */
+.column-labels label {
+  display: none; }
+.column-labels .product-image, .column-labels .product-details, .column-labels .product-removal {
+  text-indent: -9999px; }
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee; }
+  .product .product-image {
+    width: 100%; }
+  .product .product-details {
+    width: 100%; }
+    .product .product-details .product-title {
+      font-size: 2em; }
+    .product .product-details .product-description {
+      line-height: 1.4em; }
+  .product .product-price {
+    font-size: 1.5em; }
+  .product .product-quantity input {
+    width: 40px;
+    font-size: 1.4em; }
+  .product .remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #e15f41;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 3px; }
+  .product .product-line-price {
+    font-size: 1.4em; }
+
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px; }
+  .totals .totals-item label {
+    float: left;
+    clear: both;
+    width: 79%;
+    text-align: right; }
+  .totals .totals-item .totals-value {
+    float: right;
+    width: 21%;
+    text-align: right; }
+
+.checkout {
+  float: right;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #6b6;
+  font-size: 25px;
+  border-radius: 3px; }
+  .checkout a {
+    text-decoration: none;
+    color: #fff; }
+
+.checkout:hover {
+  background-color: #494; }
+
+#cartSection2 {
+  padding: 20px; }
+  #cartSection2 h3 {
+    font-size: 1.7em; }
+  #cartSection2 .previouslyViewedProduct {
+    text-align: center;
+    margin-bottom: 20px; }
+    #cartSection2 .previouslyViewedProduct button {
+      border-radius: 0;
+      border: 0;
+      background-color: black;
+      font-size: 1.2em;
+      padding: 10px 70px;
+      color: white;
+      margin-top: 20px;
+      width: 80%; }
+
+.checkoutSection1 {
+  margin: 100px 20px 0 20px; }
+  .checkoutSection1 h1, .checkoutSection1 h2 {
+    padding-top: 10px; }
+  .checkoutSection1 .orderSummary {
+    padding-top: 20px; }
+    .checkoutSection1 .orderSummary .orderItemDetails {
+      float: left;
+      width: 100%; }
+      .checkoutSection1 .orderSummary .orderItemDetails img {
+        float: left;
+        width: 100px; }
+      .checkoutSection1 .orderSummary .orderItemDetails .bla {
+        padding-top: 20px; }
+    .checkoutSection1 .orderSummary .orderPriceDetails {
+      width: 100%; }
+      .checkoutSection1 .orderSummary .orderPriceDetails span {
+        width: 100%; }
+        .checkoutSection1 .orderSummary .orderPriceDetails span h4 {
+          float: left; }
+        .checkoutSection1 .orderSummary .orderPriceDetails span h5 {
+          float: right; }
+    .checkoutSection1 .orderSummary .orderSubtotal {
+      padding: 20px 0; }
+    .checkoutSection1 .orderSummary .orderShipping {
+      padding-bottom: 20px; }
+    .checkoutSection1 .orderSummary .orderTotal {
+      padding-bottom: 20px; }
+      .checkoutSection1 .orderSummary .orderTotal h5 {
+        font-size: 1.8em; }
+
+.clear {
+  content: '';
+  display: table;
+  clear: both; }
+
+.checkoutSection2 {
+  padding: 20px; }
+  .checkoutSection2 h2 {
+    margin-bottom: 20px; }
+  .checkoutSection2 .customerInformation form input[type=email] {
+    outline: 1px solid grey;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 10px; }
+  .checkoutSection2 .customerInformation form #checkboxLabel {
+    padding: 10px;
+    margin-top: 10px;
+    color: black; }
+  .checkoutSection2 .customerInformation form h2 {
+    padding: 20px 0; }
+  .checkoutSection2 .customerInformation form input[type=text] {
+    outline: 1px solid grey;
+    padding: 10px;
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 10px; }
+  .checkoutSection2 .customerInformation form a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center; }
+  .checkoutSection2 .customerInformation form button {
+    margin: auto;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-size: 1.2em; }
 
 @media only screen and (min-width: 768px) {
   #homeSection1 {
@@ -291,7 +518,8 @@ header {
     display: none; }
 
   #homeSection3 {
-    display: flex; }
+    display: flex;
+    justify-content: center; }
     #homeSection3 #homeSection3Text {
       order: 2;
       flex: 1; }
@@ -328,7 +556,53 @@ header {
       justify-content: space-between; }
       #productSection2 .reccomendedProductsWrapper .categoryProduct {
         flex: 1;
-        max-width: 30%; } }
+        max-width: 30%; }
+
+  .cartSection1 h1 {
+    font-size: 1.5em; }
+  .cartSection1 .shopping-cart .column-labels label {
+    display: block;
+    font-size: 1.2em;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; }
+  .cartSection1 .shopping-cart .product-price::after {
+    content: ''; }
+  .cartSection1 .shopping-cart .product-image {
+    width: 20%; }
+    .cartSection1 .shopping-cart .product-image img {
+      max-width: 100%; }
+  .cartSection1 .shopping-cart .product-details {
+    width: 37%; }
+    .cartSection1 .shopping-cart .product-details .product-title {
+      font-size: 1.2em;
+      padding-left: 10px; }
+    .cartSection1 .shopping-cart .product-details .product-description {
+      font-size: 1em;
+      padding: 20px 10px 0 10px; }
+  .cartSection1 .shopping-cart .product-price {
+    width: 12%;
+    font-size: 1.2em; }
+  .cartSection1 .shopping-cart .product-quantity {
+    width: 10%; }
+    .cartSection1 .shopping-cart .product-quantity input {
+      font-size: 1.2em; }
+  .cartSection1 .shopping-cart .product-removal {
+    width: 9%;
+    font-size: 1.2em; }
+  .cartSection1 .shopping-cart .product-line-price {
+    width: 12%;
+    font-size: 1.2em; }
+
+  #cartSection2 h3 {
+    margin-bottom: 20px;
+    text-align: center; }
+  #cartSection2 .previouslyViewedProductsWrapper {
+    display: flex;
+    justify-content: space-between; }
+    #cartSection2 .previouslyViewedProductsWrapper .previouslyViewedProduct {
+      flex: 1;
+      max-width: 30%; } }
 @media only screen and (min-width: 1200px) {
   .container {
     width: 80%;
@@ -410,6 +684,21 @@ header {
       #categorySection2 .categoryProductsWrapper h2 {
         width: 100%;
         font-size: 2em;
-        margin-bottom: 30px; } }
+        margin-bottom: 30px; }
+
+  #productSection1 .productInfo span .addToCartButton {
+    width: 45%; }
+  #productSection1 .productInfo span .checkoutButton {
+    width: 45%;
+    margin-left: 10px; }
+
+  .checkoutSection1 {
+    float: right;
+    width: 45%; }
+
+  .checkoutSection2 {
+    float: left;
+    width: 45%;
+    margin-top: 100px; } }
 
 /*# sourceMappingURL=style.css.map */
